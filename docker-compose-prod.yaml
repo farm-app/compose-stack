@@ -2,13 +2,15 @@ version: '3.6'
 
 services:
   keycloak:
-    image: jboss/keycloak
+    image: quay.io/keycloak/keycloak:14.0.0
     container_name: keycloak
-#    command: start-dev --http-port=8081
+    command: -c standalone.xml
     ports:
-      - "8081:8081"
+      - "8080:8080"
+      - "8443:8443"
     environment:
-      - "KEYCLOAK_ADMIN=${KEYCLOAK_ADMIN_USERNAME}"
+      - "DB_VENDOR=h2"
+      - "KEYCLOAK_USER=${KEYCLOAK_ADMIN_USERNAME}"
       - "KEYCLOAK_PASSWORD=${KEYCLOAK_ADMIN_PASSWORD}"
 
   redis:
