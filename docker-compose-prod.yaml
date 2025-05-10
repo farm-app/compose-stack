@@ -8,6 +8,7 @@ services:
     ports:
       - "8081:8081"
     environment:
+      - "DB_VENDOR=h2"
       - "KEYCLOAK_ADMIN=${KEYCLOAK_ADMIN_USERNAME}"
       - "KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_ADMIN_PASSWORD}"
 
