@@ -88,6 +88,10 @@ services:
       - "9103:9103"
     restart: always
 
+  notification-service:
+    image: andrey2702/notification-service:prod
+    restart: always
+
 
 # postgres - создать базы данных, подключится к ним
 # redis, подключится
