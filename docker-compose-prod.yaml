@@ -98,6 +98,10 @@ services:
       - "9104:9104"
     restart: always
 
+  report-service:
+    image: andrey2702/report-service:prod
+    restart: always
+
 
 # postgres - создать базы данных, подключится к ним
 # redis, подключится
