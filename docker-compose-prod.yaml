@@ -92,6 +92,12 @@ services:
     image: andrey2702/notification-service:prod
     restart: always
 
+  product-service:
+    image: andrey2702/product-service:prod
+    ports:
+      - "9104:9104"
+    restart: always
+
 
 # postgres - создать базы данных, подключится к ним
 # redis, подключится
