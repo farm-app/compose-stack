@@ -7,6 +7,7 @@ services:
     command: -c standalone.xml
     ports:
       - "8081:8081"
+      - "9990:9990"
     environment:
       - "DB_VENDOR=h2"
       - "KEYCLOAK_ADMIN=${KEYCLOAK_ADMIN_USERNAME}"
