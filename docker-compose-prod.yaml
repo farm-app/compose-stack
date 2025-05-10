@@ -102,6 +102,10 @@ services:
     image: andrey2702/report-service:prod
     restart: always
 
+  working-norm-service:
+    image: andrey2702/working-norm-service:prod
+    restart: always
+
 
 # postgres - создать базы данных, подключится к ним
 # redis, подключится
