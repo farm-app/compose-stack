@@ -2,7 +2,7 @@ version: '3.6'
 
 services:
   keycloak:
-    image: quay.io/keycloak/keycloak:21.1.1
+    image: quay.io/keycloak/keycloak:20.0.0-0
     container_name: keycloak
     command: start-dev --http-port=8081
     ports:
@@ -20,7 +20,7 @@ services:
       - "REDIS_PASSWORD=${REDIS_PASSWORD}"
 
   kafka:
-    image: bitnami/kafka:3.6
+    image: bitnami/kafka:3.4
     container_name: kafka
     ports:
       - "9092:9092"
@@ -57,9 +57,6 @@ services:
       - "POSTGRES_DB=${POSTGRES_DB}"
     ports:
       - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-
 
   eureka-service:
     image: andrey2702/eureka-service:prod
