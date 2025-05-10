@@ -8,14 +8,8 @@ services:
     ports:
       - "8081:8081"
     environment:
-      - "KC_HTTPS_CERTIFICATE_FILE=/opt/keycloak/conf/server.crt.pem"
-      - "KC_HTTPS_CERTIFICATE_KEY_FILE=/opt/keycloak/conf/server.key.pem"
       - "KEYCLOAK_ADMIN=${KEYCLOAK_ADMIN_USERNAME}"
       - "KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_ADMIN_PASSWORD}"
-    volumes:
-      - $PWD/server.crt.pem:/opt/keycloak/conf/server.crt.pem
-      - $PWD/server.key.pem:/opt/keycloak/conf/server.key.pem
-
 
   redis:
     image: redis:6.2.11
