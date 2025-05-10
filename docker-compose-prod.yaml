@@ -82,6 +82,12 @@ services:
       - "9101:9101"
     restart: always
 
+  user-service:
+    image: andrey2702/user-service:prod
+    ports:
+      - "9103:9103"
+    restart: always
+
 
 # postgres - создать базы данных, подключится к ним
 # redis, подключится
